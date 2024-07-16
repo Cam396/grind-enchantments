@@ -53,7 +53,7 @@ public final class GrindstoneEvents {
     public static final Event<CanTakeResult> CAN_TAKE_RESULT = EventFactory.createArrayBacked(CanTakeResult.class, callbacks -> (input1, input2, player, wrapperLookup) -> {
         for (CanTakeResult callback : callbacks) {
             if (!callback.canTakeResult(input1, input2, player, wrapperLookup)) {
-                return false;
+                return true;
             }
         }
 
