@@ -87,6 +87,10 @@ public class DisenchantOperation implements GrindstoneEvents.CanInsert, Grindsto
             int cost = debugLevelCost("onTakeResult", GrindEnchantments.getLevelCost(enchantedItemStack, config.disenchant().costFunction(), config.filter(), wrapperLookup));
             ApplyLevelCostEvent.EVENT.invoker().applyLevelCost(cost, player);
         }
+        else {
+            int cost = debugLevelCost("onTakeResult", GrindEnchantments.getLevelCost(enchantedItemStack, config.disenchant().costFunction(), config.filter(), wrapperLookup));
+            ApplyLevelCostEvent.EVENT.invoker().applyLevelCost(cost, player);
+        }
 
         input.setStack(stack1Book ? 1 : 0, config.disenchant().consumeItem() ?
             ItemStack.EMPTY : grind(enchantedItemStack, config.filter()));
