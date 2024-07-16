@@ -35,5 +35,5 @@ public record MoveConfig(boolean enabled, CostFunction costFunction) {
 
     public static final MoveConfig DEFAULT = new MoveConfig(true,
         new FilterCostFunction(new FirstEnchantmentCostFunction(new TransformCostFunction(
-            new CountLevelsCostFunction(3.0, 8.0), 0.5, 0.5))));
+            new CountLevelsCostFunction(0.5, 0.0), 0.5, 0.5))));
 }
