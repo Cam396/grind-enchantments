@@ -34,5 +34,5 @@ public record DisenchantConfig(boolean enabled, boolean consumeItem, CostFunctio
     ).apply(instance, instance.stable(DisenchantConfig::new)));
 
     public static final DisenchantConfig DEFAULT = new DisenchantConfig(true, false,
-        new FilterCostFunction(new TransformCostFunction(new CountMinPowerCostFunction(), 0.3, 8.0)));
+        new FilterCostFunction(new TransformCostFunction(new CountMinPowerCostFunction(), 0.5, 0.0)));
 }
